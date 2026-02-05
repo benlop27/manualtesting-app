@@ -2,13 +2,15 @@
 
 const express = require('express');
 const cors = require('cors');
+const bodyParser =  require('body-parser');
 const app = express();
-const port = 3000;
+const port = 8080;
 const definicionesAPI = require('./src/Presentacion/API/index');
  
 
 app.use(cors());    
- 
+app.use(bodyParser.json())
+
 app.use('/api', definicionesAPI);
 
 app.get('/', (req, res) => {
