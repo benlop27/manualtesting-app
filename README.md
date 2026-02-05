@@ -56,6 +56,45 @@ graph TD
 - Archivos JSON por entidad
 - `usuarios.json`, etc.
 
+## Flujo de Solicitud HTTP (Secuencia)
+
+```mermaid
+sequenceDiagram
+    actor Cliente
+    participant Router as Controlador<br/>(Router)
+    participant Servicio
+    participant Reglas
+    participant Repository as Repositorio<br/>(DB)
+    participant JSON as Archivo JSON
+
+    Cliente->>Router: GET /usuarios/:id
+    Router->>Router: Validar parámetros
+    Router->>Servicio: obtenerUsuarioPorId(id)
+    Servicio->>Reglas: Validar ID
+    alt ID Válido
+        Reglas-->>Servicio: ✓ Válido
+        Servicio->>Repository: obtenerPorId('usuarios', id)
+        Repository->>JSON: leer usuarios.json
+        JSON-->>Repository: array de usuarios
+        Repository->>Repository: buscar por id
+        alt Usuario Encontrado
+            Repository-->>Servicio: usuario
+            Servicio-->>Router: usuario
+            Router-->>Cliente: 200 { user: {...} }
+        else Usuario No Encontrado
+            Repository-->>Servicio: null
+            Servicio-->>Servicio: throw Error(USUARIO_NO_EXISTE)
+            Servicio-->>Router: Error 404
+            Router-->>Cliente: 404 { error: "Usuario no encontrado" }
+        end
+    else ID Inválido
+        Reglas-->>Servicio: ✗ Inválido
+        Servicio-->>Servicio: throw Error(ID_USUARIO_OBLIGATORIO)
+        Servicio-->>Router: Error 400
+        Router-->>Cliente: 400 { error: "El ID del usuario es obligatorio" }
+    end
+```
+
 ## Scripts
 
 ```bash
