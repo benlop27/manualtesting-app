@@ -61,37 +61,32 @@ graph TD
 ```mermaid
 sequenceDiagram
     actor Cliente
-    participant Router as Controlador<br/>(Router)
+    participant Router as Controlador<br/>(Presentación)
     participant Servicio
     participant Reglas
-    participant Repository as Repositorio<br/>(DB)
-    participant JSON as Archivo JSON
+    participant Repository as Repositorio<br/>(Acceso a Datos)
+    participant BD as Base de Datos
 
-    Cliente->>Router: GET /usuarios/:id
-    Router->>Router: Validar parámetros
-    Router->>Servicio: obtenerUsuarioPorId(id)
-    Servicio->>Reglas: Validar ID
-    alt ID Válido
-        Reglas-->>Servicio: ✓ Válido
-        Servicio->>Repository: obtenerPorId('usuarios', id)
-        Repository->>JSON: leer usuarios.json
-        JSON-->>Repository: array de usuarios
-        Repository->>Repository: buscar por id
-        alt Usuario Encontrado
-            Repository-->>Servicio: usuario
-            Servicio-->>Router: usuario
-            Router-->>Cliente: 200 { user: {...} }
-        else Usuario No Encontrado
-            Repository-->>Servicio: null
-            Servicio-->>Servicio: throw Error(USUARIO_NO_EXISTE)
-            Servicio-->>Router: Error 404
-            Router-->>Cliente: 404 { error: "Usuario no encontrado" }
+    Cliente->>Router: Realiza solicitud HTTP
+    Router->>Servicio: Delega lógica de negocio
+    Servicio->>Reglas: Define y aplica reglas de negocio
+    alt Reglas Válidas
+        Reglas-->>Servicio: ✓ Cumple restricciones
+        Servicio->>Repository: Orquesta operación CRUD
+        Repository->>BD: Interactúa con base de datos
+        BD-->>Repository: Devuelve resultado de datos
+        Repository-->>Servicio: Retorna datos procesados
+        alt Datos Encontrados
+            Servicio-->>Router: Envía resultado exitoso
+            Router-->>Cliente: ✓ Retorna respuesta HTTP 200
+        else Datos No Encontrados
+            Servicio-->>Router: Propaga error controlado
+            Router-->>Cliente: ✗ Retorna error HTTP 404
         end
-    else ID Inválido
-        Reglas-->>Servicio: ✗ Inválido
-        Servicio-->>Servicio: throw Error(ID_USUARIO_OBLIGATORIO)
-        Servicio-->>Router: Error 400
-        Router-->>Cliente: 400 { error: "El ID del usuario es obligatorio" }
+    else Reglas Inválidas
+        Reglas-->>Servicio: ✗ No cumple restricciones
+        Servicio-->>Router: Propaga error controlado
+        Router-->>Cliente: ✗ Retorna error HTTP 400
     end
 ```
 
