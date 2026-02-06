@@ -1,6 +1,4 @@
-# Crea una github action con alpine linux que haga npm install y luego npm run unit-test
-
-name: Pruebas Unitarias
+name: Pruebas de Integración
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
@@ -13,5 +11,5 @@ jobs:
         node-version: '14'
     - name: Instalar dependencias
       run: npm install
-    - name: Ejecutar pruebas unitarias
-      run: npm run test-integration
+    - name: Ejecutar pruebas de integración
+      run: npm run integration-test

@@ -4,7 +4,7 @@ name: Pruebas Unitarias
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: alpine-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Configurar Node.js

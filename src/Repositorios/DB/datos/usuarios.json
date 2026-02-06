@@ -1,1 +1,442 @@
-[]
+[
+  {
+    "nombre": "Pedro López",
+    "email": "pedro@example.com",
+    "id": "979f1287-b772-4808-b36d-ef1838ca792b"
+  },
+  {
+    "nombre": "Ana Martínez",
+    "email": "ana@example.com",
+    "id": "d630d525-f73b-4fcc-aaa8-2f7c8d07e4bf"
+  },
+  {
+    "nombre": "Test User",
+    "email": "test@example.com",
+    "id": "74d9b016-c164-4091-881b-719224d78bf3"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "c3a42abc-f02f-405c-af06-e1b45c32ea5c"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "5dfb052f-e4cf-4cbd-be93-d10bb8595f53"
+  },
+  {
+    "nombre": "Pedro López",
+    "email": "pedro@example.com",
+    "id": "40b52e00-5b07-415a-a715-5b699efd50e9"
+  },
+  {
+    "nombre": "Ana Martínez",
+    "email": "ana@example.com",
+    "id": "1ba4ee7a-0193-4f2b-a0db-38d849401bdf"
+  },
+  {
+    "nombre": "Test User",
+    "email": "test@example.com",
+    "id": "c7148d4b-a63b-4652-8243-1a786d1f92e8"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "2bc83883-8406-4236-b161-99b7da57d82a"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "c1fd0ee4-f4d3-49d2-9a83-61c233b52231"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "027d44ad-846c-4a39-913b-8d8b257cf182"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "6f111c9c-fbb4-4df2-b421-9f44d22859c8"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "cfe974e5-ab23-44e7-85ce-6850ebeaa06f"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "7f00b9c7-6796-4252-bb53-c113fc3ed050"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "351aa813-f74a-4e43-8cb9-6efda070b8fc"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "dae8bbf1-a388-4294-a482-088c820c5bb5"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "2f6471f6-4315-4d35-9036-a42d94831955"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "bc4a60bb-44fd-42ef-b748-7703c34414f3"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "6bcc4b67-c209-424f-abc6-3221310fce03"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "53601d86-1ff6-4013-9e2a-1bc33662eb79"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "fbdfe1fb-994d-4e1e-a163-74efae3b2c4a"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "eb60e109-4e32-4863-a547-9a9aacc91779"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "438eaab6-7f85-499a-8dd2-7b9ba1e8ff27"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "ec495a0e-dea9-4b00-abc8-062c38524e03"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "c0c1ab79-3547-4176-bbcf-22cfe7f987b3"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "6560f42f-fcf4-4470-9bb8-f02085b3fd16"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "ca44a16c-c244-4e20-a3d6-d8a6ed983ec1"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "18ad156d-daea-414e-ad7f-9de2f13947c7"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "a2a3b74a-82b5-440d-a5db-1f1c7dc334c6"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "cc812f9c-a88a-4ab7-97bc-aeb8c9be9a90"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "f35881ef-d628-43b1-a004-562f9bef023f"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "f797027d-0a55-4e87-a29e-00acabe15367"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "129c879f-b231-4824-8285-18b343ade48c"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "f76ea0ba-8929-4afd-8c7f-21a9bdf9aa5c"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "208df536-4e1b-4d7f-b5af-b804206fd326"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "1cdaac6e-ff95-49aa-9b4f-badcf276bc08"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "289303c9-a388-479e-a929-801b9fdf897b"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "310a73e0-e72b-491d-8f1c-cd3f110de2b6"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "19fac9c0-a67b-491a-b3e5-ea5128c58854"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "6b627c4f-eed1-4474-a1ef-f713c386d9bb"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "a3c6c9c8-77cd-499f-becf-d527032f3014"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "491c9aa6-f8b7-4427-a50e-28f9e3c6bd4d"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "c3a8c42d-530d-4736-9e42-f2041743c06b"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "aa217554-f995-4ed2-9827-e5a24197c4ae"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "eb6fef08-a3f9-4615-a405-66fb513680b3"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "6cd325a8-192d-4b88-8601-1487db8d1448"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "a42f36f6-5908-427d-9411-219490d5021d"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "cf405ece-03d8-4808-8cd4-4b098b887b27"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "845cd107-cb98-4da1-bda0-eac5c783813b"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "c3c3389a-dd1f-4d3d-a9cf-3cb02f79ba11"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "11655c5f-9119-41b6-b0f9-46186d151e1a"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "fcba7809-19e2-4453-a512-c3d502a52c53"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "e427f1b9-ce70-4f18-a291-10a734e07800"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "101eed6a-e36b-4c35-a07e-b243758a9447"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "523db44e-dcfa-40f9-b6e7-fe53a6aa0b0a"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "c55c8a65-1b36-45cc-9081-3d2380baadbc"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "9071a5ef-5da5-4d0e-a66d-a5f695b249a6"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "44a4f7c6-686e-4eaa-8607-483b6cfefa1e"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "3f609e61-a6f8-4ece-8870-8c14ac84da3e"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "389bb998-5b4b-40f1-9256-fb940f857662"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "e9ccc054-a16e-4826-8dbe-57e08e9fe9e4"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "5f0f03c7-a238-4a62-bbe1-914f966556df"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "84e73d06-051c-4080-823a-d20b5ef2cfb3"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "4fb14207-9672-468f-9e27-244c54f60025"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "f7f0b07d-3132-41b1-9fb6-6f3df5202462"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "b5cc111c-359c-4042-ad5d-5d32bc58187f"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "4bebc52b-1150-49da-ab13-b3533f5b1583"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "3f41906e-b7e9-4c94-a43f-1ca76d5579d7"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "b48b3280-4eb3-41c1-808c-b8f345ffe3c6"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "25cc78fb-fa0f-4e33-ba3e-9d1ca10bb6ee"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "3658f77d-98e6-489c-9802-1ec0bb52573f"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "73ca9315-bde9-46f5-a890-f13572fc2b19"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "74299820-c356-4eda-9940-9639c32d9236"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "58b04c68-d3be-4790-8595-e24b967bdc82"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "2956fe1d-e2ec-409d-a3ed-f51dcb9831f8"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "af56b787-ec99-4723-b4ca-1ce010a8c41b"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "1897119d-47c1-4514-b77c-1a10339f082d"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "4d62ec7d-4893-4bf9-a975-34b804ad2029"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "d4149817-3ad7-4495-801b-8ed150646fef"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "4cd435a5-b205-4c59-b32d-874b34973137"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "2303fda8-d2d4-4e2b-8765-24b82284233d"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "3d4c6075-bcd8-4b86-8268-210ad4809b0f"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "5123831f-b5a2-4b6b-9a66-c12ddf4bb7b3"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "136247bb-e7d7-414d-99d8-4f8bd98fe630"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "d2972270-2873-4cd8-96f3-ec0a81eccf1b"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "3861b58a-a667-4d60-8d70-ffa80c2d738d"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "b7b14fa9-8716-4c6f-8798-cebb6da43d83"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "79d31d22-3126-4ba1-a70d-c896419972e4"
+  }
+]
