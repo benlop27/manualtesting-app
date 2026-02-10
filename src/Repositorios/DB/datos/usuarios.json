@@ -438,5 +438,35 @@
     "nombre": "Test",
     "email": "test@example.com",
     "id": "79d31d22-3126-4ba1-a70d-c896419972e4"
+  },
+  {
+    "nombre": "Usuario Test",
+    "email": "test@example.com",
+    "id": "d8f4417a-c8fe-450e-ae86-1a4215518fbf"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "0d227051-2f7b-4c11-bbfa-d36bc540e99c"
+  },
+  {
+    "nombre": "Test",
+    "email": "invalid-email",
+    "id": "6c572e3c-0135-4b68-98f7-501289819c62"
+  },
+  {
+    "nombre": "   ",
+    "email": "test@example.com",
+    "id": "6674253a-943f-4f9c-a665-c02a6541bdd2"
+  },
+  {
+    "nombre": "Valid User",
+    "email": "valid@example.com",
+    "id": "71741053-c455-48ae-94d6-f2880da1e770"
+  },
+  {
+    "nombre": "Test",
+    "email": "test@example.com",
+    "id": "d06317d6-0d83-4db3-ab5f-cde3656a57cc"
   }
 ]
