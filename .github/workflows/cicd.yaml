@@ -62,21 +62,21 @@ jobs:
       - name: Deploy DEV
         run: |
           gcloud run deploy $SERVICE_DEV \
-            --image docker.io/${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ needs.build.outputs.image_tag }} \
-            --region $REGION \
-            --platform managed \
+            --image=docker.io/${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ needs.build.outputs.image_tag }} \
+            --region=$REGION \
+            --platform=managed \
             --allow-unauthenticated \
-            --memory 512Mi \
-            --cpu 1 \
-            --min-instances 0 \
-            --max-instances 1
+            --memory=512Mi \
+            --cpu=1 \
+            --min-instances=0 \
+            --max-instances=1
 
       - name: Get DEV URL
         id: get_url
         run: |
           URL=$(gcloud run services describe $SERVICE_DEV \
-            --region $REGION \
-            --format='value(status.url)')
+            --region=$REGION \
+            --format=value(status.url))
           echo "url=$URL" >> $GITHUB_OUTPUT
 
       - name: Wait for service to be ready
@@ -138,11 +138,11 @@ jobs:
       - name: Deploy PROD
         run: |
           gcloud run deploy $SERVICE_PROD \
-            --image docker.io/${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ needs.build.outputs.image_tag }} \
-            --region $REGION \
-            --platform managed \
+            --image=docker.io/${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ needs.build.outputs.image_tag }} \
+            --region=$REGION \
+            --platform=managed \
             --allow-unauthenticated \
-            --memory 512Mi \
-            --cpu 1 \
-            --min-instances 0 \
-            --max-instances 1
+            --memory=512Mi \
+            --cpu=1 \
+            --min-instances=0 \
+            --max-instances=1
