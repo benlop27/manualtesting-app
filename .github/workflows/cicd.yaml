@@ -16,7 +16,7 @@ jobs:
   # ======================
   # 1️⃣ BUILD
   # ======================
-  build:
+  construir:
     runs-on: ubuntu-latest
     outputs:
       image_tag: ${{ steps.meta.outputs.tag }}
@@ -46,7 +46,7 @@ jobs:
   # ======================
   # 2️⃣ DEPLOY DEV
   # ======================
-  deploy-dev:
+  despliegue-dev:
     runs-on: ubuntu-latest
     needs: build
     outputs:
@@ -78,7 +78,7 @@ jobs:
   # ======================
   # 3️⃣ E2E TESTS
   # ======================
-  e2e:
+  pruebas-e2e:
     runs-on: ubuntu-latest
     needs: deploy-dev
     environment:
@@ -113,7 +113,7 @@ jobs:
   # ======================
   # 4️⃣ DEPLOY PROD
   # ======================
-  deploy-prod:
+  despliegue-prod:
     runs-on: ubuntu-latest
     needs: e2e
     if: success()
