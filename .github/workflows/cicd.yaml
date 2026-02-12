@@ -96,7 +96,7 @@ jobs:
       - name: Ejecutar pruebas E2E con Cypress
         run: |
           cd e2e
-          npx cypress run
+          npx cypress run --record --key ${{ secrets.CYPRESS_RECORD_KEY }}
 
       # - name: Upload Cypress artifacts (if failed)
       #   if: failure()
