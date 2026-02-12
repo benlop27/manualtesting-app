@@ -1,0 +1,33 @@
+name: Construir Artefacto
+on:
+  release:
+    types:
+      - created
+  workflow_dispatch: 
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Paso 1: Chequear el código
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Paso 2: Configurar Docker para usar los secretos de Docker Hub
+    - name: iniciar sesión en Docker Hub
+      uses: docker/login-action@v2
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+
+    # Paso 3: Construir la imagen Docker
+    - name: Construye el artefacto Docker y etiquétalo con la versión del release
+      run: |
+        VERSION=${{ github.event.release.tag_name }}
+        docker build -t ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:${VERSION} -t ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:latest .  
+
+    # Paso 4: Empujar la imagen al Docker Hub
+    - name: Enviar la imagen Docker al Docker Hub con la etiqueta de versión y la etiqueta "latest"
+      run: |
+        docker push ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:${VERSION}
+        docker push ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:latest
