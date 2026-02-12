@@ -71,13 +71,6 @@ jobs:
             --min-instances=0 \
             --max-instances=1
 
-      - name: Obtener URL de Desarrollo
-        id: get_url
-        run: |
-          URL=$(gcloud run services describe $SERVICE_DEV \
-            --region=$REGION \
-            --format=value(status.url))
-          echo "url=$URL" >> $GITHUB_OUTPUT
 
   # ======================
   # 3️⃣ E2E TESTS
