@@ -89,6 +89,8 @@ jobs:
   e2e:
     runs-on: ubuntu-latest
     needs: deploy-dev
+    environment:
+      name: testing
 
     steps:
       - uses: actions/checkout@v3
@@ -107,14 +109,14 @@ jobs:
           cd e2e
           npx cypress run --config baseUrl=${{ needs.deploy-dev.outputs.dev_url }}
 
-      - name: Upload Cypress artifacts (if failed)
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: cypress-artifacts
-          path: |
-            e2e/cypress/screenshots
-            e2e/cypress/videos
+      # - name: Upload Cypress artifacts (if failed)
+      #   if: failure()
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: cypress-artifacts
+      #     path: |
+      #       e2e/cypress/screenshots
+      #       e2e/cypress/videos
 
   # ======================
   # 4️⃣ DEPLOY PROD
@@ -124,7 +126,7 @@ jobs:
     needs: e2e
     if: success()
     environment:
-      name: production   # opcional: para approval manual
+      name: production
 
     steps:
       - uses: google-github-actions/auth@v2
