@@ -29,5 +29,6 @@ jobs:
     # Paso 4: Empujar la imagen al Docker Hub
     - name: Enviar la imagen Docker al Docker Hub con la etiqueta de versión y la etiqueta "latest"
       run: |
+        VERSION=${{ github.event.release.tag_name }}
         docker push ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:${VERSION}
         docker push ${{ secrets.DOCKER_USERNAME }}/manualtesting-app:latest

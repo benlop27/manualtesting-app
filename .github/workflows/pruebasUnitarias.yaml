@@ -1,7 +1,7 @@
 # Crea una github action con alpine linux que haga npm install y luego npm run unit-test
 
 name: Pruebas Unitarias
-on: [push, pull_request, workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
