@@ -1,4 +1,4 @@
-name: CICD Construir, Testear, Desplegar A Pruebas, y luego Desplegar a Producción
+name: Pipeline CI/CD - Proyecto Manual Testing
 
 on:
   release:
