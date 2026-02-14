@@ -14,10 +14,52 @@ env:
 jobs:
 
   # ======================
-  # 1️⃣ BUILD
+  # 1️⃣ PRUEBAS UNITARIAS
+  # ======================
+  pruebas-unitarias:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas unitarias
+        run: npm run unit-test
+
+  # ======================
+  # 2️⃣ PRUEBAS DE INTEGRACIÓN
+  # ======================
+  pruebas-integracion:
+    runs-on: ubuntu-latest
+    needs: pruebas-unitarias
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas de integración
+        run: npm run integration-test
+
+  # ======================
+  # 3️⃣ CONSTRUIR ARTEFACTO
   # ======================
   construir:
     runs-on: ubuntu-latest
+    needs: pruebas-integracion
     outputs:
       image_tag: ${{ steps.meta.outputs.tag }}
 
@@ -44,13 +86,15 @@ jobs:
           docker push ${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ steps.meta.outputs.tag }}
 
   # ======================
-  # 2️⃣ DEPLOY DEV
+  # 4️⃣ DESPLEGAR A PRUEBAS
   # ======================
   despliegue-dev:
     runs-on: ubuntu-latest
     needs: construir
     outputs:
       dev_url: ${{ steps.get_url.outputs.url }}
+    environment:
+      name: testing
 
     steps:
       - uses: google-github-actions/auth@v2
@@ -59,7 +103,7 @@ jobs:
 
       - uses: google-github-actions/setup-gcloud@v2
 
-      - name: Desplegar a Desarrollo
+      - name: Desplegar a Ambiente de Pruebas
         run: |
           gcloud run deploy $SERVICE_DEV \
             --image=docker.io/${{ secrets.DOCKER_USERNAME }}/${IMAGE_NAME}:${{ needs.construir.outputs.image_tag }} \
@@ -71,13 +115,28 @@ jobs:
             --min-instances=0 \
             --max-instances=1
 
+  # ======================
+  # 5️⃣ PRUEBAS DE API
+  # ======================
+  pruebas-api:
+    runs-on: ubuntu-latest
+    needs: despliegue-dev
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Instalar Newman
+        run: npm install -g newman
+
+      - name: Ejecutar pruebas Postman
+        run: newman run "API Testing.postman_collection.json" --reporters cli
 
   # ======================
-  # 3️⃣ E2E TESTS
+  # 6️⃣ PRUEBAS E2E
   # ======================
   pruebas-e2e:
     runs-on: ubuntu-latest
-    needs: despliegue-dev
+    needs: pruebas-api
     environment:
       name: testing
 
@@ -108,7 +167,7 @@ jobs:
       #       e2e/cypress/videos
 
   # ======================
-  # 4️⃣ DEPLOY PROD
+  # 7️⃣ DESPLEGAR A PRODUCCIÓN
   # ======================
   despliegue-prod:
     runs-on: ubuntu-latest
