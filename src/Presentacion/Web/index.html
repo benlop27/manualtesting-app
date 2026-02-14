@@ -92,21 +92,24 @@
         // Función para cargar usuarios desde la API
         async function cargarUsuarios() {
             try {
-                const response = await fetch('/usuarios');
+                const response = await fetch('/api/usuarios');
                 if (!response.ok) {
                     throw new Error('Error al obtener usuarios');
                 }
                 const data = await response.json();
                 const usuarios = data.usuarios;
 
+                // Filtrar usuarios que tengan nombre (ignorar sin nombre)
+                const usuariosValidos = usuarios.filter(usuario => usuario.nombre && usuario.nombre.trim() !== '');
+
                 // Ordenar usuarios alfabéticamente por nombre
-                usuarios.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
+                usuariosValidos.sort((a, b) => a.nombre.localeCompare(b.nombre, 'es'));
 
                 // Llenar la tabla
                 const tableBody = document.getElementById('usuariosTableBody');
                 tableBody.innerHTML = '';
                 
-                usuarios.forEach(usuario => {
+                usuariosValidos.forEach(usuario => {
                     const row = document.createElement('tr');
                     row.innerHTML = `
                         <td>${usuario.nombre}</td>
