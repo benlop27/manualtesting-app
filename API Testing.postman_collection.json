@@ -20,7 +20,8 @@
               "});",
               "",
               "pm.test(\"Al menos hay un usuario disponible\", function () {",
-              "    pm.expect(jsonData.length).to.be.above(0);",
+              "    const data = jsonData.usuarios;",
+              "    pm.expect(data.length).to.be.above(0);",
               "});"
             ],
             "type": "text/javascript",
