@@ -6,12 +6,12 @@
     "cypress:run": "cypress run"
   },
   "dependencies": {
-    "cypress": "^12.0.0",
-    "crypto": "^1.0.1"
+    "cypress": "^13.0.0"
   },
   "devDependencies": {
-    "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
-    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
-    "esbuild": "^0.27.3"
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cucumber/cucumber": "^9.5.0",
+    "esbuild": "^0.19.0"
   }
 }

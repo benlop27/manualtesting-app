@@ -21,6 +21,26 @@ module.exports = defineConfig({
         "file:preprocessor",
         createBundler({
           plugins: [createEsbuildPlugin.default(config)],
+          // Configurar esbuild para Node.js
+          define: {
+            "global": "globalThis",
+          },
+          external: [
+            "crypto",
+            "fs",
+            "path",
+            "util",
+            "stream",
+            "buffer",
+            "events",
+            "assert",
+            "os",
+            "url",
+            "http",
+            "https",
+            "zlib",
+            "perf_hooks",
+          ],
         })
       );
 
