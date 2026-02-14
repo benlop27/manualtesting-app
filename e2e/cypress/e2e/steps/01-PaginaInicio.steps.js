@@ -5,7 +5,7 @@ import { Given, Then } from "@badeball/cypress-cucumber-preprocessor";
 Given("que abro la página principal de la aplicación", () => {
   // Asegúrate de que tu servidor local (ej. Node/Express) esté corriendo.
   // Ajusta la URL si tu puerto no es el 3000.
-  cy.visit("http://localhost:8080");
+  cy.visit("https://manualtesting-dev-138959494334.us-central1.run.app");
 });
 
 // Mapeamos: "Entonces debería ver el encabezado principal con el texto {string}"

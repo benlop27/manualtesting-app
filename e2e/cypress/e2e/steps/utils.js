@@ -7,8 +7,8 @@
  * Navega a una URL específica
  * @param {string} url - La URL a visitar
  * @example
- * visitarPagina('http://localhost:8080')
- * visitarPagina('http://localhost:8080/usuarios')
+ * visitarPagina('https://manualtesting-dev-138959494334.us-central1.run.app')
+ * visitarPagina('https://manualtesting-dev-138959494334.us-central1.run.app/usuarios')
  */
 export const visitarPagina = (url) => {
   cy.visit(url);
@@ -276,7 +276,7 @@ export const esperar = (milisegundos) => {
  * @param {string} urlParcial - Parte de la URL a verificar
  * @example
  * verificarURL('/usuarios')
- * verificarURL('http://localhost:8080/dashboard')
+ * verificarURL('https://manualtesting-dev-138959494334.us-central1.run.app/dashboard')
  */
 export const verificarURL = (urlParcial) => {
   cy.url().should('include', urlParcial);

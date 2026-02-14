@@ -2,7 +2,7 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given("el usuario abre la pagina principal", () => {
-  cy.visit("http://localhost:8080");
+  cy.visit("https://manualtesting-dev-138959494334.us-central1.run.app");
 });
 
 When("la pagina ha cargado", () => {
