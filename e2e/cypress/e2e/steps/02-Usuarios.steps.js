@@ -25,6 +25,11 @@ Then("no se visualizan errores visibles y", () => {
   cy.get(".error").should("not.exist");
 });
 
+Then("o se visualizan errores visibles aunque no haga nada", () => {
+  // Placeholder: validar que no existan errores
+  cy.get(".error").should("not.exist");
+});
+
 Then("estan ordenados alfabeticamente por nombre", () => {
   cy.get("tbody tr").first().should("exist");
 });
