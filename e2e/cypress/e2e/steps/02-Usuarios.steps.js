@@ -25,7 +25,7 @@ Then("no se visualizan errores visibles y", () => {
   cy.get(".error").should("not.exist");
 });
 
-Then("no se visualizan errores visibles aunque no haga nada", () => {
+Then("no se visualizan errores visibles", () => {
   // Placeholder: validar que no existan errores
   cy.get(".error").should("not.exist");
 });
