@@ -5,6 +5,12 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
+  "dependencies": {
+    "cypress": "^12.0.0",
+    "@cypress/cucumber-preprocessor": "^4.0.0",
+    "cypress-cucumber-preprocessor": "^4.0.0"
+
+  },
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^24.0.0",
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.8",
